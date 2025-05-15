@@ -1,2 +1,5 @@
 mountpoints:
-  /: https://drive.google.com/drive/folders/1hH_xz3T2wromkhAlPljl7PWZlfvT9HRT
+  /:
+    url: https://author-p29663-e1648175.adobeaemcloud.com/bin/franklin.delivery/prafful-s/mumbai-summit-repo/main
+    type: "markup"
+    suffix: ".html"
