@@ -1,33 +1,8 @@
 /**
- * Get Full Name
- * @name getFullName Concats first name and last name
- * @param {string} firstname in Stringformat
- * @param {string} lastname in Stringformat
- * @return {string}
- */
-function getFullName(firstname, lastname) {
-  return `${firstname} ${lastname}`.trim();
-}
-
-/**
- * Custom submit function
- * @param {scope} globals
- */
-function submitFormArrayToString(globals) {
-  const data = globals.functions.exportData();
-  Object.keys(data).forEach((key) => {
-    if (Array.isArray(data[key])) {
-      data[key] = data[key].join(',');
-    }
-  });
-  globals.functions.submitForm(data, true, 'application/json');
-}
-
-/**
  * Calculate the number of days between two dates.
  * @param {*} endDate
  * @param {*} startDate
- * @returns {number} returns the number of days between two dates
+ * @return {number} returns the number of days between two dates
  */
 function days(endDate, startDate) {
   const start = typeof startDate === 'string' ? new Date(startDate) : startDate;
@@ -43,4 +18,4 @@ function days(endDate, startDate) {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, submitFormArrayToString };
+export { days };
